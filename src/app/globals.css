@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #09090b;
+  --color-ink-raised: #111113;
+  --color-panel: #18181b;
+  --color-line: #27272a;
+  --color-line-strong: #3f3f46;
+  --color-fg: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-faint: #71717a;
+  --color-slate: #94a3b8;
+  --color-wanted: #f43f5e;
+  --color-found: #10b981;
+
+  --font-display: var(--font-jakarta);
+  --font-sans: var(--font-inter);
+
+  --radius-card: 8px;
+  --radius-control: 6px;
+  --radius-field: 5px;
+  --radius-badge: 4px;
+
+  --breakpoint-desk: 64rem;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.field {
+  height: 44px;
+  width: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-field);
+  background: transparent;
+  padding: 0 12px;
+  font-size: 13px;
+  color: var(--color-fg);
+}
+
+.field::placeholder {
+  color: var(--color-faint);
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--color-muted);
+}
+
+textarea.field {
+  height: auto;
+  min-height: 96px;
+  padding: 10px 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: var(--radius-control);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--color-fg);
+  color: var(--color-ink);
+}
+
+.btn-primary:hover {
+  background: #e4e4e7;
+}
+
+.btn-ghost {
+  border: 1px solid var(--color-line);
+  color: var(--color-muted);
+}
+
+.btn-ghost:hover {
+  color: var(--color-fg);
+  border-color: var(--color-line-strong);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
